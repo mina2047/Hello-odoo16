@@ -7,21 +7,21 @@ Installing Odoo 16 with one command.
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/pro-777/Hello-odoo16/master/run.sh | sudo bash -s odoo-one 10016 20016
+curl -s https://raw.githubusercontent.com/mina2047/Hello-odoo16/master/run.sh | sudo bash -s odoo-one 10016 20016
 ```
 
-to set up first Odoo instance @ `localhost:10015` (default master password: `mostafa@1234`)
+to set up first Odoo instance @ `localhost:10016` (default master password: `mostafa@1234`)
 
 and
 
 ``` bash
-curl -s https://raw.githubusercontent.com/pro-777/Hello-odoo16/master/run.sh | sudo bash -s odoo-two 11016 21016
+curl -s https://raw.githubusercontent.com/mina2047/Hello-odoo16/master/run.sh | sudo bash -s odoo-two 11016 21016
 ```
 
-to set up another Odoo instance @ `localhost:11015` (default master password: `mostafa@1234`)
+to set up another Odoo instance @ `localhost:11016` (default master password: `mostafa@1234`)
 
 Some arguments:
-* First argument (**odoo-one**): Odoo deploy folder
+* First argument (**odoo16-one**): Odoo deploy folder
 * Second argument (**10016**): Odoo port
 * Third argument (**20016**): live chat port
 
@@ -56,7 +56,7 @@ docker-compose up -d
 **If you get the permission issue**, change the folder permission to make sure that the container is able to access the directory:
 
 ``` sh
-$ git clone https://github.com/pro-777/Hello-odoo16.git
+$ git clone https://github.com/mina2047/Hello-odoo16.git
 $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
 $ mkdir -p postgresql
@@ -102,7 +102,7 @@ docker-compose down
 
 # Live chat
 
-In [docker-compose.yml#L21](docker-compose.yml#L21), we exposed port **20015** for live-chat on host.
+In [docker-compose.yml#L21](docker-compose.yml#L21), we exposed port **20016** for live-chat on host.
 
 Configuring **nginx** to activate live chat feature (in production):
 
@@ -121,7 +121,7 @@ server {
 # docker-compose.yml
 
 * odoo:16.0
-* postgres:16
+* postgres:12
 
 # Odoo 16 screenshots
 
